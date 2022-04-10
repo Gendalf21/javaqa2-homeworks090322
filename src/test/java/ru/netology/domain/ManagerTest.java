@@ -39,6 +39,26 @@ class ManagerTest {
 
         assertArrayEquals(expected, actual);
     }
+    @Test
+    public void findLast1() {
+
+        Manager manager = new Manager(11);
+        manager.add(first);
+        manager.add(second);
+        manager.add(third);
+        manager.add(fourth);
+        manager.add(fifth);
+        manager.add(sixth);
+        manager.add(seventh);
+        manager.add(eighth);
+        manager.add(ninth);
+        manager.add(tenth);
+
+        Film[] expected = {tenth, ninth, eighth, seventh, sixth, fifth, fourth, third, second, first};
+        Film[] actual = manager.findLast();
+
+        assertArrayEquals(expected, actual);
+    }
 
     @Test
     public void findAll() {
